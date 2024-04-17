@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #038C7F;
+  --second-color: var(--black-color);
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #F2E7DC;
+}
+
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F2E7DC;
+}
+
+.login_box {
+  position: relative;
+  width: 450px;
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 7.5em 2.5em 4em 2.5em;
+  color: var(--second-color);
+  box-shadow: 0px 0px 10px 10px rgba(26, 34, 32, 0.2);
+}
+
+.login-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  width: 140px;
+  height: 70px;
+  border-radius: 0 0 20px 20px;
+}
+
+.login-header span {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.login-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 50%;
+  background: transparent;
+  box-shadow: 15px 0 0 0 var(--primary-color);
+}
+
+.login-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 50%;
+  background: transparent;
+  box-shadow: -15px 0 0 0 var(--primary-color);
+}
+
+.input_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.input_box_reg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+
+.input-field {
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+  background: transparent;
+  color: var(--second-color);
+  padding: 0 50px 0 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  outline: none;
+}
+.input-field_reg {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  background: transparent;
+  color: var(--second-color);
+  padding: 0 50px 0 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  outline: none;
+}
+
+#user {
+  margin-bottom: 10px;
+}
+
+.label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  transition: 0.2s;
+}
+
+.input-field:focus ~ .label,
+.input-field:valid + .label {
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  background-color: #A9D9D0;
+  border-radius: 30px;
+  color: var(--second-color);
+  padding: 0 10px;
+}
+.input-field_reg:focus ~ .label,
+.input-field_reg:valid + .label {
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  background-color: #A9D9D0;
+  border-radius: 30px;
+  color: var(--second-color);
+  padding: 0 10px;
+}
+
+.input-submit {
+  width: 100%;
+  height: 50px;
+  background: #259b85;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  color:white;
+}
+
+.input-submit:hover {
+  background: #027373;
+}
+
+.register {
+  text-align: center;
+}
+
+.register a {
+  font-weight: 500;
+}
+.login {
+  text-align: center;
+}
+
+.login a {
+  font-weight: 500;
+}
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.icon {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  font-size: 20px;
+}
+
+/*main*/
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color:#038C7F;
+}
+.chatbot-container {
+  display: flex;
+  justify-content: space-around ;
+  margin-left: 160px; 
+  margin-top: 70px;
+
+ 
+}
+.chatbot {
+  background-color: #556066; 
+  border-radius: 15px;
+  padding: 30px;
+  width: 325px; 
+  margin-left: 2.2rem; 
+  position: relative;
+  /* Add the following line for the shadow */
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.chatbot h2 {
+  margin-top: 0; 
+}
+
+.chatbot button {
+  background-color: #259b85; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center; 
+  text-decoration: none;
+  display: block; 
+  position: absolute; 
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%); 
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.chatbot button:hover {
+  background-color: #027373; 
+}
+
+
+.sidebar {
+  background-color: #37474f;
+  color: #ffffff;
+  width: 200px;
+  padding-right: 60px;
+  height: 100vh;
+  position: fixed;
+  top: 78px;
+  left: 0;
+}
+
+.sidebar h2 i {
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #027373; 
+}
+.History{
+left: 0;
+}
+/*model*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #F2E7DC;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #038C7F;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linguistic-model {
+  background-color: #556066;
+  border-radius: 15px;
+  padding: 30px;
+  width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.linguistic-model h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.linguistic-model select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #364042;
+  color: white;
+  font-size: 16px;
+  appearance: none; /* Remove default dropdown arrow */
+}
+
+.linguistic-model label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  color: white;
+}
+
+.linguistic-model input[type="checkbox"] {
+  margin-right: 5px; /* Adjusted margin */
+  transform: translateY(2px); /* Adjusted translateY */
+
+ 
+}
+
+.all input[type="checkbox"] {
+  margin-right: 600px; /* Adjusted margin */
+  transform: translateY(15px); /* Adjusted translateY */
+
+}
+
+.linguistic-model button {
+  background-color: #259b85;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.linguistic-model button:hover {
+  background-color: #027373;
+}
+
+.rights {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr)); /* Three columns */
+  gap: 5px;
+}
+
+.rights label {
+  display: flex;
+  align-items: center;
+}
+

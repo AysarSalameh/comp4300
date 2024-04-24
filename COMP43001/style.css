@@ -9,27 +9,7 @@
   --primary-color: rgb(35, 169, 158);
   --second-color: var(--black-color);
 }
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Distribute space between items */
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
 
-.header img {
-  width: 70px; 
-  height: auto; 
-  margin-right: 50px; 
-  border-radius: 50%; 
-}
-
-.header h1 {
-  margin: 0; /* Remove default margin */
-  flex-grow: 1; /* Allow h1 to grow and occupy remaining space */
-  text-align: center; /* Center align the text */
-}
 
 body {
   background-position: center;
@@ -232,10 +212,9 @@ a:hover {
 .chatbot-container {
   display: flex;
   justify-content: space-around ;
-  margin-left: 160px; 
   margin-top: 70px;
-
- 
+  margin-right: 3rem;
+  margin-left: 12rem;
 }
 .chatbot {
   background-color: #7E7E7E; 
@@ -243,9 +222,8 @@ a:hover {
   padding: 30px;
   width: 325px; 
   height: 350px;
-  margin-left: 2.2rem; 
+  margin-left: 3rem; 
   position: relative;
-
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -284,7 +262,7 @@ a:hover {
   padding-right: 60px;
   height: 100vh;
   position: fixed;
-  top: 109px;
+  top: 78px;
   left: 0;
 }
 

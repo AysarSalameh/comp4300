@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Sina BDM</title>
-<link rel="stylesheet" href="./style.css">
-<link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
 </head>
 <body>
 <div class="wrapper">
@@ -13,26 +12,32 @@
     <div class="login-header">
       <span>Login</span>
     </div>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <div class="input_box">
+        <input type="text" name="email" id="user" class="input-field" required value="{{ form.email.value }}">
+        <label for="user" class="label">Email</label>
+        <i class="bx bx-envelope icon"></i>
+        {% if form.email.errors %}
+          <div class="error">{{ form.email.errors }}</div>
+        {% endif %}
+      </div>
 
-    <div class="input_box">
-      <input type="text" id="user" class="input-field" required>
-      <label for="user" class="label">Email</label>
-      <i class="bx bx-envelope icon"></i>
-    </div>
+      <div class="input_box">
+        <input type="password" name="password" id="pass" class="input-field" required value="{{ form.password.value }}">
+        <label for="pass" class="label">Password</label>
+        <i class="bx bx-lock-alt icon"></i>
+        {% if form.password.errors %}
+          <div class="error">{{ form.password.errors }}</div>
+        {% endif %}
+      </div>
 
-    <div class="input_box">
-      <input type="password" id="pass" class="input-field" required>
-      <label for="pass" class="label">Password</label>
-     
-      <i class="bx bx-lock-alt icon"></i>
-      
-    </div>
-    <div class="input_box">
-      <input type="submit" class="input-submit" value="Login">
-    </div>
-
+      <div class="input_box">
+        <input type="submit" class="input-submit" value="Login">
+      </div>
+    </form>
     <div class="register">
-      <span>Don't have an account? <a href="register.html">Register</a></span>
+      <span>Don't have an account? <a href="{% url 'register' %}">Register</a></span>
     </div>
   </div>
 </div>
